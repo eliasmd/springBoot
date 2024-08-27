@@ -3,10 +3,12 @@ package com.sales.repository.customer;
 import com.sales.domain.entity.Customer;
 import com.sales.domain.entity.Product;
 import com.sales.repository.helper.JsonConversion;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class CustomerFromJson implements CustomerRepository {
     private JsonConversion conversion;
 
