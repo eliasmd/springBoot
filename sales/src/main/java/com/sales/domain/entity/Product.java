@@ -4,6 +4,16 @@ import java.math.BigDecimal;
 
 public class Product {
 
+    public Product(){}
+
+    public Product(String id, BigDecimal price, String category, Integer yearStock, Integer yearProduction) {
+        this.id = id;
+        this.price = price;
+        this.category = category;
+        this.yearStock = yearStock;
+        this.yearProduction = yearProduction;
+    }
+
     private String id;
     private BigDecimal price;
     private String category;
@@ -48,5 +58,21 @@ public class Product {
 
     public void setYearProduction(Integer yearProduction) {
         this.yearProduction = yearProduction;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Product other = (Product) obj;
+        return this.id.equals(other.id) &&
+                this.price.equals(other.price) &&
+                this.category.equals(other.category) &&
+                this.yearStock.equals(other.yearStock) &&
+                this.yearProduction.equals(other.yearProduction);
     }
 }

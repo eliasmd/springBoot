@@ -11,9 +11,9 @@ public class Product {
     private BigDecimal price;
     @JsonProperty("tipo_vinho")
     private String category;
-    @JsonProperty("safra")
-    private Integer yearStock;
     @JsonProperty("ano_compra")
+    private Integer yearStock;
+    @JsonProperty("safra")
     private Integer yearProduction;
 
     public String getId() {
@@ -55,5 +55,7 @@ public class Product {
     public void setYearProduction(Integer yearProduction) {
         this.yearProduction = yearProduction;
     }
+
+
 }
 

@@ -2,13 +2,15 @@ package com.sales.repository.bean;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+
 public class Customer {
     @JsonProperty("cpf")
     private String document;
     @JsonProperty("nome")
     private String name;
     @JsonProperty("compras")
-    private Order order;
+    private List<OrderItem> order;
 
     public String getDocument() {
         return document;
@@ -26,11 +28,4 @@ public class Customer {
         this.name = name;
     }
 
-    public Order getOrder() {
-        return order;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
-    }
 }

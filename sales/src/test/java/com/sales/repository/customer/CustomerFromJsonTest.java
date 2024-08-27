@@ -1,12 +1,15 @@
 package com.sales.repository.customer;
 
 import com.sales.domain.entity.Customer;
+import com.sales.domain.entity.Order;
 import com.sales.domain.entity.Product;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,8 +25,16 @@ class CustomerFromJsonTest {
     }
 
     @Test
-    void gotAllProducts(){
-        assertEquals(customers.size(), 20);
+    void gotAllDomainCustomers(){
+        assertEquals(14, customers.size());
     }
+
+    @Test
+    void checkCustomerDomainIntegrity(){
+        Customer customer = new Customer("05870189179","Geraldo Pedro Julio Nascimento", new ArrayList<Order>());
+        assertEquals(customer, customers.get(0));
+    }
+
+
 
 }
