@@ -1,4 +1,4 @@
-package com.sales.repository.entity;
+package com.sales.repository.bean;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

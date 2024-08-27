@@ -1,4 +1,4 @@
-package com.sales;
+package com.sales.startup;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

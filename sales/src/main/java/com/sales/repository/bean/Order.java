@@ -1,4 +1,4 @@
-package com.sales.repository.entity;
+package com.sales.repository.bean;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
