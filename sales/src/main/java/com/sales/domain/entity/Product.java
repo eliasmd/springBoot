@@ -1,10 +1,5 @@
 package com.sales.domain.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.math.BigDecimal;
 
 public class Product {
@@ -54,5 +49,4 @@ public class Product {
     public void setYearProduction(Integer yearProduction) {
         this.yearProduction = yearProduction;
     }
-
 }
