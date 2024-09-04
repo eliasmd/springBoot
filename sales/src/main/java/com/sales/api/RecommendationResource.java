@@ -1,7 +1,6 @@
 package com.sales.api;
 
-import com.sales.domain.entity.Product;
-import com.sales.service.customer.CustomerService;
+import com.sales.domain.entity.ProductDomain;
 import com.sales.service.recommendation.RecommendationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +24,7 @@ public class RecommendationResource {
     }
 
     @GetMapping(path = "recomendacao/{customer}/{category}")
-    public List<Product> getRecommendationByCustomerAndType(@PathVariable String customer, @PathVariable String category){
+    public List<ProductDomain> getRecommendationByCustomerAndType(@PathVariable String customer, @PathVariable String category){
         return getRecommendationService().getRecommendationByCustomerAndType(customer, category);
     }
 }

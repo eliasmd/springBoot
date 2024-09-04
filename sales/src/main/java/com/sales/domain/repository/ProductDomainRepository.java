@@ -1,10 +1,9 @@
-package com.sales.service.product;
+package com.sales.domain.repository;
 
 import com.sales.domain.entity.ProductDomain;
 
 import java.util.List;
 
-public interface ProductService {
-
+public interface ProductDomainRepository {
     List<ProductDomain> getProducts();
 }

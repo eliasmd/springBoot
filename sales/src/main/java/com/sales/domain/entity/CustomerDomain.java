@@ -2,15 +2,15 @@ package com.sales.domain.entity;
 
 import java.util.List;
 
-public class Customer {
+public class CustomerDomain {
     private String document;
     private String name;
-    private List<Order> orders;
+    private List<OrderDomain> orders;
 
 
-    public Customer() {}
+    public CustomerDomain() {}
 
-    public Customer(String document, String name, List<Order> orders) {
+    public CustomerDomain(String document, String name, List<OrderDomain> orders) {
         this.document = document;
         this.name = name;
         this.orders = orders;
@@ -32,11 +32,11 @@ public class Customer {
         this.name = name;
     }
 
-    public List<Order> getOrders() {
+    public List<OrderDomain> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
+    public void setOrders(List<OrderDomain> orders) {
         this.orders = orders;
     }
 
@@ -48,7 +48,7 @@ public class Customer {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Customer other = (Customer) obj;
+        CustomerDomain other = (CustomerDomain) obj;
         return this.document.equals(other.document) &&
                 this.name.equals(other.name);
     }

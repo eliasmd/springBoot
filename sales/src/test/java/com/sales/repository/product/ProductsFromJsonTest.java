@@ -1,7 +1,7 @@
 package com.sales.repository.product;
 
-import com.sales.domain.entity.Product;
-import com.sales.repository.provider.io.product.ProductsFromJson;
+import com.sales.domain.entity.ProductDomain;
+import com.sales.repository.provider.io.json.product.ProductsFromJson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(SpringExtension.class)
 class ProductsFromJsonTest {
 
-    private static List<Product> products;
+    private static List<ProductDomain> products;
 
     @BeforeAll
     static void setUp() {
@@ -29,7 +29,7 @@ class ProductsFromJsonTest {
 
     @Test
     void checkDomainProductIntegrity(){
-        Product product = new Product("1",  new BigDecimal("229.99"),"Tinto", 2018, 2017);
+        ProductDomain product = new ProductDomain("1",  new BigDecimal("229.99"),"Tinto", 2018, 2017);
         assertEquals(product, products.get(0));
     }
 

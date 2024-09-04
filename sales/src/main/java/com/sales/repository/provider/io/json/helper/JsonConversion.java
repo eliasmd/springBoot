@@ -1,16 +1,13 @@
-package com.sales.repository.provider.io.helper;
+package com.sales.repository.provider.io.json.helper;
 
 import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sales.domain.entity.Product;
 import org.springframework.beans.BeanUtils;
 
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class JsonConversion {

@@ -1,4 +1,4 @@
-package com.sales.repository.provider.io.bean.json;
+package com.sales.repository.provider.io.json.bean;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,10 +1,10 @@
 package com.sales.service.customer;
 
-import com.sales.domain.entity.Customer;
+import com.sales.domain.entity.CustomerDomain;
 
 import java.util.List;
 
 public interface CustomerService {
 
-    List<Customer> getLoyalCustomers();
+    List<CustomerDomain> getLoyalCustomers();
 }

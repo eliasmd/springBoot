@@ -1,6 +1,6 @@
 package com.sales.service.recommendation;
 
-import com.sales.domain.entity.Product;
+import com.sales.domain.entity.ProductDomain;
 import com.sales.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,12 +21,12 @@ public class RecommendationServiceImpl implements RecommendationService {
         this.productService = productService;
     }
 
-    public List<Product> getRecommendationByCustomerAndType() {
+    public List<ProductDomain> getRecommendationByCustomerAndType() {
         return getProductService().getProducts();
     }
 
     @Override
-    public List<Product> getRecommendationByCustomerAndType(String customer, String category) {
+    public List<ProductDomain> getRecommendationByCustomerAndType(String customer, String category) {
         return getProductService().getProducts().stream().filter(obj -> obj.getCategory().equalsIgnoreCase(category)).toList();
     }
 }

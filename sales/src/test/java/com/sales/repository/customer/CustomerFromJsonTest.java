@@ -1,8 +1,8 @@
 package com.sales.repository.customer;
 
-import com.sales.domain.entity.Customer;
-import com.sales.domain.entity.Order;
-import com.sales.repository.provider.io.customer.CustomerFromJson;
+import com.sales.domain.entity.CustomerDomain;
+import com.sales.domain.entity.OrderDomain;
+import com.sales.repository.provider.io.json.customer.CustomerFromJson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(SpringExtension.class)
 class CustomerFromJsonTest {
 
-    private static List<Customer> customers;
+    private static List<CustomerDomain> customers;
 
     @BeforeAll
     static void setUp() {
@@ -30,7 +30,7 @@ class CustomerFromJsonTest {
 
     @Test
     void checkCustomerDomainIntegrity(){
-        Customer customer = new Customer("05870189179","Geraldo Pedro Julio Nascimento", new ArrayList<Order>());
+        CustomerDomain customer = new CustomerDomain("05870189179","Geraldo Pedro Julio Nascimento", new ArrayList<OrderDomain>());
         assertEquals(customer, customers.get(0));
     }
 

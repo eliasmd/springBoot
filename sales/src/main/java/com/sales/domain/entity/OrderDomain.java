@@ -4,8 +4,8 @@ package com.sales.domain.entity;
 import java.math.BigDecimal;
 import java.util.Map;
 
-public class Order {
+public class OrderDomain {
     private BigDecimal price;
-    private Map<Product, Integer> products;
-    private Customer customer;
+    private Map<ProductDomain, Integer> products;
+    private CustomerDomain customer;
 }

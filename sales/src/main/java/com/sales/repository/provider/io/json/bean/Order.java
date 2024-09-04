@@ -1,4 +1,4 @@
-package com.sales.repository.provider.io.bean.json;
+package com.sales.repository.provider.io.json.bean;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

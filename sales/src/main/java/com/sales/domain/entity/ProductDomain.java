@@ -2,11 +2,11 @@ package com.sales.domain.entity;
 
 import java.math.BigDecimal;
 
-public class Product {
+public class ProductDomain {
 
-    public Product(){}
+    public ProductDomain(){}
 
-    public Product(String id, BigDecimal price, String category, Integer yearStock, Integer yearProduction) {
+    public ProductDomain(String id, BigDecimal price, String category, Integer yearStock, Integer yearProduction) {
         this.id = id;
         this.price = price;
         this.category = category;
@@ -68,7 +68,7 @@ public class Product {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Product other = (Product) obj;
+        ProductDomain other = (ProductDomain) obj;
         return this.id.equals(other.id) &&
                 this.price.equals(other.price) &&
                 this.category.equals(other.category) &&

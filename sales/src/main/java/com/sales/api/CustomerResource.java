@@ -1,6 +1,6 @@
 package com.sales.api;
 
-import com.sales.domain.entity.Customer;
+import com.sales.domain.entity.CustomerDomain;
 import com.sales.service.customer.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,8 +23,8 @@ public class CustomerResource {
     }
 
     @GetMapping(path = "clientes-fieis")
-    public List<Customer> getTopLoyalCustomers(){
-        List<Customer> customers = getCustomerService().getLoyalCustomers();
+    public List<CustomerDomain> getTopLoyalCustomers(){
+        List<CustomerDomain> customers = getCustomerService().getLoyalCustomers();
         return customers;
     }
 }
