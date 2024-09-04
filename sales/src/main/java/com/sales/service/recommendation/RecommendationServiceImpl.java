@@ -21,8 +21,12 @@ public class RecommendationServiceImpl implements RecommendationService {
         this.productService = productService;
     }
 
-    @Override
     public List<Product> getRecommendationByCustomerAndType() {
         return getProductService().getProducts();
+    }
+
+    @Override
+    public List<Product> getRecommendationByCustomerAndType(String customer, String category) {
+        return getProductService().getProducts().stream().filter(obj -> obj.getCategory().equalsIgnoreCase(category)).toList();
     }
 }

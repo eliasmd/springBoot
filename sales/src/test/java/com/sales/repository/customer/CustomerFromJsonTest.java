@@ -2,13 +2,12 @@ package com.sales.repository.customer;
 
 import com.sales.domain.entity.Customer;
 import com.sales.domain.entity.Order;
-import com.sales.domain.entity.Product;
+import com.sales.repository.provider.io.customer.CustomerFromJson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 

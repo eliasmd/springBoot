@@ -1,4 +1,4 @@
-package com.sales.repository.helper;
+package com.sales.repository.provider.io.helper;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;

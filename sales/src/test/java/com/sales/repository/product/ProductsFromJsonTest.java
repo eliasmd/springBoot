@@ -1,6 +1,7 @@
 package com.sales.repository.product;
 
 import com.sales.domain.entity.Product;
+import com.sales.repository.provider.io.product.ProductsFromJson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

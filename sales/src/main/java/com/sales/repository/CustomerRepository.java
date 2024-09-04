@@ -1,7 +1,6 @@
-package com.sales.repository.customer;
+package com.sales.repository;
 
 import com.sales.domain.entity.Customer;
-import com.sales.domain.entity.Product;
 
 import java.util.List;
 

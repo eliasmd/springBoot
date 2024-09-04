@@ -1,8 +1,7 @@
-package com.sales.repository.product;
+package com.sales.repository;
 
 import com.sales.domain.entity.Product;
 
-import java.io.IOException;
 import java.util.List;
 
 public interface ProductRepository {

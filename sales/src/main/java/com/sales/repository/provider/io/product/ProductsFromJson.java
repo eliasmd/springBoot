@@ -1,7 +1,8 @@
-package com.sales.repository.product;
+package com.sales.repository.provider.io.product;
 
 import com.sales.domain.entity.Product;
-import com.sales.repository.helper.JsonConversion;
+import com.sales.repository.ProductRepository;
+import com.sales.repository.provider.io.helper.JsonConversion;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class ProductsFromJson implements ProductRepository {
     public List<Product> getProducts() {
         List<Product> products = new ArrayList<Product>();
         try{
-            List<com.sales.repository.bean.Product> productsSource =  this.getConversion().<List<com.sales.repository.bean.Product>>convertJsonToPOJO("https://rgr3viiqdl8sikgv.public.blob.vercel-storage.com/produtos-mnboX5IPl6VgG390FECTKqHsD9SkLS.json", com.sales.repository.bean.Product.class);
+            List<com.sales.repository.provider.io.bean.json.Product> productsSource =  this.getConversion().<List<com.sales.repository.provider.io.bean.json.Product>>convertJsonToPOJO("https://rgr3viiqdl8sikgv.public.blob.vercel-storage.com/produtos-mnboX5IPl6VgG390FECTKqHsD9SkLS.json", com.sales.repository.provider.io.bean.json.Product.class);
             products = getConversion().<List<Product>>parseArrays(productsSource, Product.class);
         } catch(Exception ex) {
             System.out.println(ex.getMessage());

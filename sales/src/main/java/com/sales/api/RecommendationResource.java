@@ -24,8 +24,8 @@ public class RecommendationResource {
         this.recommendationService = recommendationService;
     }
 
-    @GetMapping(path = "recomendacao/{cliente}/{tipo}")
-    public List<Product> getRecommendationByCustomerAndType(@PathVariable String cliente, @PathVariable String tipo){
-        return getRecommendationService().getRecommendationByCustomerAndType();
+    @GetMapping(path = "recomendacao/{customer}/{category}")
+    public List<Product> getRecommendationByCustomerAndType(@PathVariable String customer, @PathVariable String category){
+        return getRecommendationService().getRecommendationByCustomerAndType(customer, category);
     }
 }

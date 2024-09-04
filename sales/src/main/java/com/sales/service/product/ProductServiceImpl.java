@@ -1,7 +1,7 @@
 package com.sales.service.product;
 
 import com.sales.domain.entity.Product;
-import com.sales.repository.product.ProductRepository;
+import com.sales.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.sales.service.customer;
 
 import com.sales.domain.entity.Customer;
-import com.sales.repository.customer.CustomerRepository;
+import com.sales.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
